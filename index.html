@@ -690,9 +690,17 @@ table.gtbl{width:100%;border-collapse:collapse;font-size:13px}
         </select>
         <input type="number" id="ta-period-y" value="2026" min="2020" max="2030" style="width:80px">
       </div>
-      <textarea class="rev-ta" id="ta-text" placeholder="Paste TripAdvisor reviews here...&#10;&#10;e.g.:&#10;★★★★★ John S. — Excellent stay!&#10;The staff were amazing, rooms very clean...&#10;&#10;★★★★☆ Maria K. — Great location&#10;Beautiful hotel but breakfast could be better..."></textarea>
+      <div style="background:#e8f5e9;border-radius:9px;padding:12px 14px;font-size:12px;color:#2e7d32;margin-bottom:10px;line-height:1.6">
+        <strong>Πώς λειτουργεί:</strong> Στείλε screenshots TripAdvisor στο Claude chat &rarr; Εγώ τα αναλύω &rarr; Σου δίνω <code>.json</code> αρχείο &rarr; Ανέβασέ το εδώ!
+      </div>
+      <label class="rev-parse-btn" style="cursor:pointer;width:fit-content">
+        <i class="ti ti-file-upload"></i> Upload JSON from Claude
+        <input type="file" style="display:none" accept=".json" onchange="importReviewJSON('ta',this)">
+      </label>
+      <div style="margin-top:8px;font-size:11px;color:var(--muted)">Or paste a review summary manually:</div>
+      <textarea class="rev-ta" id="ta-text" style="min-height:80px;margin-top:6px" placeholder="Or paste raw review text here and click Analyze..."></textarea>
       <div class="rev-parsing hidden" id="ta-parsing"><i class="ti ti-loader spin"></i> AI is analyzing reviews...</div>
-      <button class="rev-parse-btn" id="ta-parse-btn" onclick="parseReviews('ta')"><i class="ti ti-sparkles"></i> Analyze with AI</button>
+      <button class="rev-parse-btn" id="ta-parse-btn" onclick="parseReviews('ta')" style="margin-top:6px"><i class="ti ti-sparkles"></i> Analyze with AI</button>
     </div>
     <div class="rev-results hidden" id="ta-results">
       <h3><i class="ti ti-chart-bar" style="color:#2d9c68"></i> Analysis Results — <span id="ta-res-period"></span></h3>
@@ -743,9 +751,17 @@ table.gtbl{width:100%;border-collapse:collapse;font-size:13px}
         </select>
         <input type="number" id="goo-period-y" value="2026" min="2020" max="2030" style="width:80px">
       </div>
-      <textarea class="rev-ta" id="goo-text" placeholder="Paste Google reviews here...&#10;&#10;e.g.:&#10;5/5 — Amazing hotel!&#10;We had a wonderful stay, the pool was perfect...&#10;&#10;4/5 — Good value&#10;Nice rooms, friendly staff, food was average..."></textarea>
+      <div style="background:#e8f0fb;border-radius:9px;padding:12px 14px;font-size:12px;color:#1a56a0;margin-bottom:10px;line-height:1.6">
+        <strong>Πώς λειτουργεί:</strong> Στείλε screenshots Google Reviews στο Claude chat &rarr; Εγώ τα αναλύω &rarr; Σου δίνω <code>.json</code> αρχείο &rarr; Ανέβασέ το εδώ!
+      </div>
+      <label class="rev-parse-btn" style="cursor:pointer;width:fit-content;background:#4285f4">
+        <i class="ti ti-file-upload"></i> Upload JSON from Claude
+        <input type="file" style="display:none" accept=".json" onchange="importReviewJSON('goo',this)">
+      </label>
+      <div style="margin-top:8px;font-size:11px;color:var(--muted)">Or paste a review summary manually:</div>
+      <textarea class="rev-ta" id="goo-text" style="min-height:80px;margin-top:6px" placeholder="Or paste raw review text here and click Analyze..."></textarea>
       <div class="rev-parsing hidden" id="goo-parsing"><i class="ti ti-loader spin"></i> AI is analyzing reviews...</div>
-      <button class="rev-parse-btn" id="goo-parse-btn" onclick="parseReviews('goo')"><i class="ti ti-sparkles"></i> Analyze with AI</button>
+      <button class="rev-parse-btn" id="goo-parse-btn" onclick="parseReviews('goo')" style="margin-top:6px"><i class="ti ti-sparkles"></i> Analyze with AI</button>
     </div>
     <div class="rev-results hidden" id="goo-results">
       <h3><i class="ti ti-chart-bar" style="color:#4285f4"></i> Analysis Results — <span id="goo-res-period"></span></h3>
@@ -1405,6 +1421,21 @@ if(typeof fbdb!=='undefined'){
 }
 renderRevHistory('ta');
 renderRevHistory('goo');
+
+
+function importReviewJSON(src, inp) {
+  const file = inp.files[0]; if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const result = JSON.parse(e.target.result);
+      showRevResults(src, result);
+      showToast('Review analysis loaded!', 's');
+    } catch(err) { showToast('Error: ' + err.message, 'w'); }
+    inp.value = '';
+  };
+  reader.readAsText(file);
+}
 
 </script>
 
