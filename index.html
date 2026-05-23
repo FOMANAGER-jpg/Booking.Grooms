@@ -307,6 +307,68 @@ table.gtbl{width:100%;border-collapse:collapse;font-size:13px}
 .toast.s{background:var(--olive)}.toast.w{background:var(--amber)}
 .hidden{display:none!important}
 
+
+/* REVIEWS */
+.rev-wrap{padding:16px 20px 40px}
+.rev-hdr{border-radius:var(--r);padding:16px 22px;margin-bottom:16px;display:flex;align-items:center;gap:14px;box-shadow:var(--sh)}
+.rev-hdr.ta{background:linear-gradient(135deg,#1a6644,#2d9c68)}
+.rev-hdr.goo{background:linear-gradient(135deg,#1a56a0,#4285f4)}
+.rev-hdr-ico{width:44px;height:44px;background:rgba(255,255,255,.2);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.rev-hdr-ico i{font-size:22px;color:#fff}
+.rev-hdr-t{font-family:var(--serif);font-size:19px;font-weight:600;color:#fff}
+.rev-hdr-s{font-size:12px;color:rgba(255,255,255,.7);margin-top:3px}
+.rev-input-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px;margin-bottom:16px;box-shadow:var(--sh)}
+.rev-input-card h3{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;display:flex;align-items:center;gap:7px}
+.rev-input-card h3 i{font-size:16px}
+.rev-period{display:flex;gap:10px;align-items:center;margin-bottom:10px;flex-wrap:wrap}
+.rev-period label{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.7px}
+.rev-period input,.rev-period select{font-family:var(--sans);font-size:13px;padding:6px 10px;border:1.5px solid var(--border);border-radius:8px;color:var(--ink);outline:none;background:var(--bg)}
+.rev-period input:focus,.rev-period select:focus{border-color:var(--sea)}
+.rev-ta{width:100%;min-height:140px;resize:vertical;font-family:monospace;font-size:12px;padding:10px 12px;border:1.5px solid var(--border);border-radius:9px;color:var(--ink);background:var(--bg);outline:none}
+.rev-ta:focus{border-color:var(--sea);background:var(--white)}
+.rev-ta::placeholder{color:var(--muted2)}
+.rev-parse-btn{padding:10px 20px;background:var(--sea);color:#fff;border:none;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;font-family:var(--sans);display:flex;align-items:center;gap:7px;margin-top:10px}
+.rev-parse-btn:hover{background:var(--sea-dark)}.rev-parse-btn:disabled{background:var(--muted2);cursor:not-allowed}
+.rev-parsing{font-size:12px;color:var(--sea);display:flex;align-items:center;gap:6px;margin-top:8px}
+.rev-results{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px;box-shadow:var(--sh)}
+.rev-results h3{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.rev-score-big{display:flex;align-items:center;gap:16px;background:var(--bg);border-radius:11px;padding:14px 18px;margin-bottom:14px}
+.rev-score-num{font-family:var(--serif);font-size:44px;font-weight:700;line-height:1}
+.rev-score-num.ta{color:#2d9c68}.rev-score-num.goo{color:#4285f4}
+.rev-score-label{font-size:12px;color:var(--muted);margin-top:3px}
+.rev-stars{font-size:22px;letter-spacing:2px}
+.rev-count{font-size:12px;color:var(--muted);margin-top:3px}
+.rev-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.rev-col{background:var(--bg);border-radius:10px;padding:14px}
+.rev-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.rev-col h4.pos{color:var(--olive)}
+.rev-col h4.neg{color:var(--coral)}
+.rev-col ul{list-style:none;padding:0}
+.rev-col ul li{font-size:12px;color:var(--ink2);padding:5px 0;border-bottom:1px solid var(--border2);display:flex;align-items:flex-start;gap:7px;line-height:1.4}
+.rev-col ul li:last-child{border-bottom:none}
+.rev-col ul li i{font-size:13px;flex-shrink:0;margin-top:1px}
+.rev-summary{background:var(--sea-light);border-radius:9px;padding:12px 14px;font-size:13px;color:var(--sea-dark);line-height:1.6;margin-bottom:14px}
+.rev-save-btn{padding:9px 20px;background:var(--olive);color:#fff;border:none;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;font-family:var(--sans);display:flex;align-items:center;gap:7px}
+.rev-save-btn:hover{background:#3a6448}
+.rev-history{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-top:14px;box-shadow:var(--sh)}
+.rev-history h3{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:12px;display:flex;align-items:center;gap:7px}
+.rev-hist-item{background:var(--bg);border-radius:9px;padding:12px 14px;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;transition:background .15s}
+.rev-hist-item:hover{background:var(--sea-light)}
+.rev-hist-period{font-size:13px;font-weight:600;color:var(--ink)}
+.rev-hist-score{font-size:18px;font-weight:700;font-family:var(--serif)}
+.rev-hist-score.ta{color:#2d9c68}.rev-hist-score.goo{color:#4285f4}
+.rev-hist-count{font-size:11px;color:var(--muted)}
+.rev-empty{padding:30px;text-align:center;color:var(--muted2)}
+.rev-empty i{font-size:32px;display:block;margin-bottom:8px;opacity:.4}
+
+/* JSON IMPORT */
+.json-import-wrap{display:flex;align-items:center;gap:8px}
+.json-imp-btn{display:flex;align-items:center;gap:5px;padding:7px 12px;background:var(--olive);color:#fff;border:none;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;font-family:var(--sans)}
+.json-imp-btn:hover{background:#3a6448}
+.json-exp-btn{display:flex;align-items:center;gap:5px;padding:7px 12px;background:var(--white);color:var(--sea);border:1.5px solid var(--sea-mid);border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;font-family:var(--sans)}
+.json-exp-btn:hover{background:var(--sea-light)}
+.json-file-inp{display:none}
+
 /* ═══ PRINT ═══ */
 @media print{
   body{background:#fff!important}
@@ -361,6 +423,10 @@ table.gtbl{width:100%;border-collapse:collapse;font-size:13px}
         <div class="dd-divider"></div>
         <div class="dd-sec-lbl">Tools</div>
         <div class="dd-item amb" id="ddi-import" onclick="ddGo('import','Import')"><i class="ti ti-file-import"></i> Import Reservations</div>
+        <div style="height:1px;background:var(--border);margin:2px 0"></div>
+        <div class="dd-sec-lbl">Reviews</div>
+        <div class="dd-item" id="ddi-ta" onclick="ddGo('ta','TripAdvisor')" style="color:#2d9c68"><i class="ti ti-brand-tripadvisor" style="color:#2d9c68"></i> TripAdvisor</div>
+        <div class="dd-item" id="ddi-goo" onclick="ddGo('goo','Google Reviews')" style="color:#4285f4"><i class="ti ti-brand-google" style="color:#4285f4"></i> Google Reviews</div>
       </div>
     </div>
   </div>
@@ -378,6 +444,8 @@ table.gtbl{width:100%;border-collapse:collapse;font-size:13px}
   <div class="tab" id="nt-report" onclick="goTab('report')"><i class="ti ti-chart-bar"></i> Report</div>
   <div class="tab pur-tab" id="nt-grooms" onclick="goTab('grooms')"><i class="ti ti-luggage"></i> Grooms Daily List</div>
   <div class="tab amb-tab" id="nt-import" onclick="goTab('import')"><i class="ti ti-file-import"></i> Import</div>
+  <div class="tab" id="nt-ta" onclick="goTab('ta')" style="color:#2d9c68"><i class="ti ti-brand-tripadvisor"></i> TripAdvisor</div>
+  <div class="tab" id="nt-goo" onclick="goTab('goo')" style="color:#4285f4"><i class="ti ti-brand-google"></i> Google Reviews</div>
 </div>
 
 <div class="sbar" id="sbar"></div>
@@ -398,6 +466,15 @@ table.gtbl{width:100%;border-collapse:collapse;font-size:13px}
   </div>
   <span class="cnt-lbl" id="cntLbl"></span>
   <div class="srch-wrap"><i class="ti ti-search srch-ico"></i><input class="srch" id="srch" placeholder="Search name, room or ref..." oninput="renderRes()"></div>
+  <label class="json-imp-btn" title="Import reservations from JSON file">
+    <i class="ti ti-file-upload"></i> Import JSON
+    <input type="file" class="json-file-inp" accept=".json" onchange="importResJSON(this)">
+  </label>
+  <button class="json-exp-btn" onclick="exportResJSON()" title="Export reservations as JSON"><i class="ti ti-file-download"></i> Export</button>
+  <button class="add-btn" id="pasteResBtn" onclick="pasteResFromClaude()" style="display:none;background:linear-gradient(135deg,#3d1a6e,#5c3d8f);position:relative">
+    <i class="ti ti-clipboard-check"></i> Paste from Claude
+    <span id="pasteResBadge" style="position:absolute;top:-5px;right:-5px;background:#f5a623;color:#fff;font-size:8px;font-weight:700;padding:2px 6px;border-radius:8px"></span>
+  </button>
   <button class="add-btn" onclick="openAdd()"><i class="ti ti-plus"></i> Add Reservation</button>
 </div>
 
@@ -594,6 +671,113 @@ table.gtbl{width:100%;border-collapse:collapse;font-size:13px}
   </div>
 </div>
 
+
+<!-- ─── TRIPADVISOR ─── -->
+<div id="tab-ta" class="hidden">
+  <div class="rev-wrap">
+    <div class="rev-hdr ta">
+      <div class="rev-hdr-ico"><i class="ti ti-brand-tripadvisor"></i></div>
+      <div><div class="rev-hdr-t">TripAdvisor Reviews</div><div class="rev-hdr-s">Paste reviews &rarr; AI extracts score, highlights &amp; improvements</div></div>
+    </div>
+    <div class="rev-input-card">
+      <h3><i class="ti ti-clipboard-text" style="color:var(--sea)"></i> Paste TripAdvisor Reviews</h3>
+      <div class="rev-period">
+        <label>Period:</label>
+        <select id="ta-period-m">
+          <option>January</option><option>February</option><option>March</option><option>April</option>
+          <option selected>May</option><option>June</option><option>July</option><option>August</option>
+          <option>September</option><option>October</option><option>November</option><option>December</option>
+        </select>
+        <input type="number" id="ta-period-y" value="2026" min="2020" max="2030" style="width:80px">
+      </div>
+      <textarea class="rev-ta" id="ta-text" placeholder="Paste TripAdvisor reviews here...&#10;&#10;e.g.:&#10;★★★★★ John S. — Excellent stay!&#10;The staff were amazing, rooms very clean...&#10;&#10;★★★★☆ Maria K. — Great location&#10;Beautiful hotel but breakfast could be better..."></textarea>
+      <div class="rev-parsing hidden" id="ta-parsing"><i class="ti ti-loader spin"></i> AI is analyzing reviews...</div>
+      <button class="rev-parse-btn" id="ta-parse-btn" onclick="parseReviews('ta')"><i class="ti ti-sparkles"></i> Analyze with AI</button>
+    </div>
+    <div class="rev-results hidden" id="ta-results">
+      <h3><i class="ti ti-chart-bar" style="color:#2d9c68"></i> Analysis Results — <span id="ta-res-period"></span></h3>
+      <div class="rev-score-big">
+        <div>
+          <div class="rev-score-num ta" id="ta-score">0.0</div>
+          <div class="rev-stars" id="ta-stars"></div>
+          <div class="rev-count" id="ta-count"></div>
+        </div>
+        <div style="flex:1">
+          <div class="rev-summary" id="ta-summary"></div>
+        </div>
+      </div>
+      <div class="rev-cols">
+        <div class="rev-col">
+          <h4 class="pos"><i class="ti ti-thumb-up"></i> What guests love</h4>
+          <ul id="ta-pos"></ul>
+        </div>
+        <div class="rev-col">
+          <h4 class="neg"><i class="ti ti-arrow-up-circle"></i> Points to improve</h4>
+          <ul id="ta-neg"></ul>
+        </div>
+      </div>
+      <button class="rev-save-btn" onclick="saveReview('ta')"><i class="ti ti-device-floppy"></i> Save to history</button>
+    </div>
+    <div class="rev-history" id="ta-history-wrap">
+      <h3><i class="ti ti-history" style="color:var(--sea)"></i> Review History</h3>
+      <div id="ta-history-list"><div class="rev-empty"><i class="ti ti-brand-tripadvisor"></i>No saved reviews yet</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── GOOGLE REVIEWS ─── -->
+<div id="tab-goo" class="hidden">
+  <div class="rev-wrap">
+    <div class="rev-hdr goo">
+      <div class="rev-hdr-ico"><i class="ti ti-brand-google"></i></div>
+      <div><div class="rev-hdr-t">Google Reviews</div><div class="rev-hdr-s">Paste reviews &rarr; AI extracts score, highlights &amp; improvements</div></div>
+    </div>
+    <div class="rev-input-card">
+      <h3><i class="ti ti-clipboard-text" style="color:var(--sea)"></i> Paste Google Reviews</h3>
+      <div class="rev-period">
+        <label>Period:</label>
+        <select id="goo-period-m">
+          <option>January</option><option>February</option><option>March</option><option>April</option>
+          <option selected>May</option><option>June</option><option>July</option><option>August</option>
+          <option>September</option><option>October</option><option>November</option><option>December</option>
+        </select>
+        <input type="number" id="goo-period-y" value="2026" min="2020" max="2030" style="width:80px">
+      </div>
+      <textarea class="rev-ta" id="goo-text" placeholder="Paste Google reviews here...&#10;&#10;e.g.:&#10;5/5 — Amazing hotel!&#10;We had a wonderful stay, the pool was perfect...&#10;&#10;4/5 — Good value&#10;Nice rooms, friendly staff, food was average..."></textarea>
+      <div class="rev-parsing hidden" id="goo-parsing"><i class="ti ti-loader spin"></i> AI is analyzing reviews...</div>
+      <button class="rev-parse-btn" id="goo-parse-btn" onclick="parseReviews('goo')"><i class="ti ti-sparkles"></i> Analyze with AI</button>
+    </div>
+    <div class="rev-results hidden" id="goo-results">
+      <h3><i class="ti ti-chart-bar" style="color:#4285f4"></i> Analysis Results — <span id="goo-res-period"></span></h3>
+      <div class="rev-score-big">
+        <div>
+          <div class="rev-score-num goo" id="goo-score">0.0</div>
+          <div class="rev-stars" id="goo-stars"></div>
+          <div class="rev-count" id="goo-count"></div>
+        </div>
+        <div style="flex:1">
+          <div class="rev-summary" id="goo-summary"></div>
+        </div>
+      </div>
+      <div class="rev-cols">
+        <div class="rev-col">
+          <h4 class="pos"><i class="ti ti-thumb-up"></i> What guests love</h4>
+          <ul id="goo-pos"></ul>
+        </div>
+        <div class="rev-col">
+          <h4 class="neg"><i class="ti ti-arrow-up-circle"></i> Points to improve</h4>
+          <ul id="goo-neg"></ul>
+        </div>
+      </div>
+      <button class="rev-save-btn" onclick="saveReview('goo')"><i class="ti ti-device-floppy"></i> Save to history</button>
+    </div>
+    <div class="rev-history" id="goo-history-wrap">
+      <h3><i class="ti ti-history" style="color:var(--sea)"></i> Review History</h3>
+      <div id="goo-history-list"><div class="rev-empty"><i class="ti ti-brand-google"></i>No saved reviews yet</div></div>
+    </div>
+  </div>
+</div>
+
 </div><!-- end .app -->
 
 <!-- ADD MODAL -->
@@ -672,9 +856,11 @@ function ddGo(tab,lbl){
 }
 
 function goTab(t){
-  ['res','rooms','day3','report','grooms','import'].forEach(x=>{
-    document.getElementById('tab-'+x).classList.toggle('hidden',x!==t);
-    document.getElementById('nt-'+x).classList.toggle('on',x===t);
+  ['res','rooms','day3','report','grooms','import','ta','goo'].forEach(x=>{
+    const el=document.getElementById('tab-'+x);
+    const nt=document.getElementById('nt-'+x);
+    if(el)el.classList.toggle('hidden',x!==t);
+    if(nt)nt.classList.toggle('on',x===t);
   });
   document.getElementById('toolbarEl').classList.toggle('hidden',t!=='res');
   document.getElementById('sbar').classList.toggle('hidden',t!=='res');
@@ -1003,6 +1189,27 @@ function showToast(msg,type){const t=document.getElementById('toast');t.textCont
 
 document.getElementById('groomDate').value=new Date().toISOString().split('T')[0];
 renderStats();renderRes();
+window.RES_CLAUDE_DATA = [];
+window.setResData = function(data) {
+  window.RES_CLAUDE_DATA = data;
+  const btn = document.getElementById('pasteResBtn');
+  const badge = document.getElementById('pasteResBadge');
+  if(btn) { btn.style.display='flex'; badge.textContent=data.length+' ready'; }
+  showToast(data.length+' reservations ready — click Paste from Claude!','s');
+};
+function pasteResFromClaude(){
+  if(!window.RES_CLAUDE_DATA||!window.RES_CLAUDE_DATA.length){showToast('No data loaded yet','w');return;}
+  const ex=new Set(RES.map(r=>r.ref));
+  let added=0,skipped=0;
+  window.RES_CLAUDE_DATA.forEach(row=>{
+    if(ex.has(row.ref))skipped++;
+    else{RES.push({...row});ex.add(row.ref);added++;}
+  });
+  sv();renderRes();
+  showToast(added+' imported'+(skipped?' — '+skipped+' duplicates':''),'s');
+  document.getElementById('pasteResBtn').style.display='none';
+}
+
 window.CLAUDE_DATA = [];
 window.setGroomData = function(data) {
   window.CLAUDE_DATA = data;
@@ -1019,6 +1226,185 @@ function pasteFromClaude(){
   });
   svG();renderGrooms();showToast(added+' rooms loaded!','s');
 }
+
+
+/* ═══════════════════════
+   JSON IMPORT / EXPORT
+═══════════════════════ */
+function exportResJSON(){
+  const blob=new Blob([JSON.stringify(RES,null,2)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  a.download='white_rocks_reservations_'+new Date().toISOString().split('T')[0]+'.json';
+  a.click();showToast('Exported '+RES.length+' reservations','s');
+}
+function importResJSON(inp){
+  const file=inp.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    try{
+      const data=JSON.parse(e.target.result);
+      if(!Array.isArray(data))throw new Error('Invalid format');
+      const ex=new Set(RES.map(r=>r.ref));
+      let added=0,skipped=0;
+      data.forEach(r=>{
+        if(!r.name||!r.arr)return;
+        const row={ref:r.ref||'',name:r.name||'',room:r.room||'',type:r.type||'DBL',arr:r.arr||'',dep:r.dep||'',ad:r.ad||2,day1:r.day1||'',day3:r.day3||'',rating:r.rating||0,notes:r.notes||''};
+        if(ex.has(row.ref)&&row.ref)skipped++;
+        else{RES.push(row);if(row.ref)ex.add(row.ref);added++;}
+      });
+      sv();renderRes();goTab('res');
+      showToast(added+' imported'+(skipped?' — '+skipped+' skipped':''),'s');
+    }catch(err){showToast('Error: '+err.message,'w');}
+    inp.value='';
+  };
+  reader.readAsText(file);
+}
+
+function exportGroomJSON(){
+  const blob=new Blob([JSON.stringify(GR,null,2)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  a.download='grooms_'+new Date().toISOString().split('T')[0]+'.json';
+  a.click();showToast('Exported','s');
+}
+function importGroomJSON(inp){
+  const file=inp.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    try{
+      const data=JSON.parse(e.target.result);
+      if(!Array.isArray(data))throw new Error('Invalid format');
+      let added=0;
+      data.forEach(r=>{
+        if(!GR.some(g=>g.room===r.room&&g.name===r.name)){
+          GR.push({room:r.room||'',name:r.name||'',dep:r.dep||'',luggage:r.luggage||'',pickup:r.pickup||'',notes:r.notes||''});
+          added++;
+        }
+      });
+      svG();renderGrooms();showToast(added+' rows added','s');
+    }catch(err){showToast('Error: '+err.message,'w');}
+    inp.value='';
+  };
+  reader.readAsText(file);
+}
+
+/* ═══════════════════════
+   REVIEWS
+═══════════════════════ */
+let taHistory=JSON.parse(localStorage.getItem('ta_reviews')||'[]');
+let gooHistory=JSON.parse(localStorage.getItem('goo_reviews')||'[]');
+const svTA=()=>{try{localStorage.setItem('ta_reviews',JSON.stringify(taHistory));}catch(e){}};
+const svGoo=()=>{try{localStorage.setItem('goo_reviews',JSON.stringify(gooHistory));}catch(e){}};
+
+function starsHtml(score,max){
+  const full=Math.floor(score);const half=score-full>=0.5?1:0;const empty=max-full-half;
+  return '★'.repeat(full)+(half?'½':'')+'☆'.repeat(empty);
+}
+
+async function parseReviews(src){
+  const txt=document.getElementById(src+'-text').value.trim();
+  if(!txt){alert('Please paste some reviews first.');return;}
+  const btn=document.getElementById(src+'-parse-btn');
+  const parsing=document.getElementById(src+'-parsing');
+  btn.disabled=true;parsing.classList.remove('hidden');
+  const platform=src==='ta'?'TripAdvisor':'Google';
+  const prompt=`You are a hotel review analyst. Analyze these ${platform} reviews.
+Return ONLY a valid JSON object, no markdown:
+{
+  "score": 4.5,
+  "count": 12,
+  "summary": "2-3 sentence overall summary",
+  "positives": ["point 1","point 2","point 3","point 4","point 5"],
+  "improvements": ["point 1","point 2","point 3","point 4","point 5"]
+}
+Reviews:
+${txt.slice(0,5000)}`;
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:prompt}]})
+    });
+    const data=await res.json();
+    const raw=(data.content||[]).map(c=>c.text||'').join('').trim();
+    const result=JSON.parse(raw.replace(/```json|```/g,'').trim());
+    showRevResults(src,result);
+    parsing.classList.add('hidden');
+  }catch(err){
+    parsing.classList.add('hidden');
+    showToast('Error: '+err.message,'w');
+  }
+  btn.disabled=false;
+}
+
+function showRevResults(src,result){
+  const period=document.getElementById(src+'-period-m').value+' '+document.getElementById(src+'-period-y').value;
+  document.getElementById(src+'-res-period').textContent=period;
+  document.getElementById(src+'-score').textContent=result.score.toFixed(1);
+  document.getElementById(src+'-stars').textContent=starsHtml(result.score,5);
+  document.getElementById(src+'-count').textContent=result.count+' reviews';
+  document.getElementById(src+'-summary').textContent=result.summary;
+  document.getElementById(src+'-pos').innerHTML=(result.positives||[]).map(p=>`<li><i class="ti ti-check" style="color:var(--olive)"></i>${p}</li>`).join('');
+  document.getElementById(src+'-neg').innerHTML=(result.improvements||[]).map(p=>`<li><i class="ti ti-arrow-up" style="color:var(--coral)"></i>${p}</li>`).join('');
+  document.getElementById(src+'-results').classList.remove('hidden');
+  // store pending
+  window[src+'_pending']={period,score:result.score,count:result.count,summary:result.summary,positives:result.positives,improvements:result.improvements,date:new Date().toISOString()};
+}
+
+function saveReview(src){
+  const pending=window[src+'_pending'];
+  if(!pending){showToast('Nothing to save','w');return;}
+  if(src==='ta'){
+    taHistory=taHistory.filter(r=>r.period!==pending.period);
+    taHistory.unshift(pending);svTA();
+    // also save to Firebase
+    if(typeof fbdb!=='undefined')fbdb.ref('ta_reviews').set(taHistory);
+    renderRevHistory('ta');
+  }else{
+    gooHistory=gooHistory.filter(r=>r.period!==pending.period);
+    gooHistory.unshift(pending);svGoo();
+    if(typeof fbdb!=='undefined')fbdb.ref('goo_reviews').set(gooHistory);
+    renderRevHistory('goo');
+  }
+  showToast('Saved to history','s');
+}
+
+function renderRevHistory(src){
+  const history=src==='ta'?taHistory:gooHistory;
+  const el=document.getElementById(src+'-history-list');
+  if(!history.length){
+    el.innerHTML=`<div class="rev-empty"><i class="ti ti-${src==='ta'?'brand-tripadvisor':'brand-google'}"></i>No saved reviews yet</div>`;
+    return;
+  }
+  el.innerHTML=history.map((r,i)=>`
+    <div class="rev-hist-item" onclick="showHistoryDetail('${src}',${i})">
+      <div>
+        <div class="rev-hist-period">${r.period}</div>
+        <div class="rev-hist-count">${r.count} reviews</div>
+      </div>
+      <div style="text-align:right">
+        <div class="rev-hist-score ${src}">${r.score.toFixed(1)}/5</div>
+        <div style="font-size:14px;color:#f5a623">${starsHtml(r.score,5)}</div>
+      </div>
+    </div>`).join('');
+}
+
+function showHistoryDetail(src,idx){
+  const history=src==='ta'?taHistory:gooHistory;
+  const r=history[idx];
+  window[src+'_pending']=r;
+  showRevResults(src,r);
+  document.getElementById(src+'-text').value='';
+  document.getElementById(src+'-period-m').value=r.period.split(' ')[0];
+  document.getElementById(src+'-period-y').value=r.period.split(' ')[1];
+  goTab(src);
+}
+
+// Load review history from Firebase
+if(typeof fbdb!=='undefined'){
+  fbdb.ref('ta_reviews').once('value').then(snap=>{const d=snap.val();if(d&&Array.isArray(d)){taHistory=d;svTA();renderRevHistory('ta');}});
+  fbdb.ref('goo_reviews').once('value').then(snap=>{const d=snap.val();if(d&&Array.isArray(d)){gooHistory=d;svGoo();renderRevHistory('goo');}});
+}
+renderRevHistory('ta');
+renderRevHistory('goo');
 
 </script>
 
@@ -1106,6 +1492,9 @@ fbdb.ref('grooms').on('value', snap => {
     GR = data; renderGrooms();
   }
 });
+// Load review history from Firebase
+fbdb.ref('ta_reviews').once('value').then(snap=>{const d=snap.val();if(d&&Array.isArray(d)){taHistory=d;localStorage.setItem('ta_reviews',JSON.stringify(d));renderRevHistory('ta');}});
+fbdb.ref('goo_reviews').once('value').then(snap=>{const d=snap.val();if(d&&Array.isArray(d)){gooHistory=d;localStorage.setItem('goo_reviews',JSON.stringify(d));renderRevHistory('goo');}});
 </script>
 
 </body>
